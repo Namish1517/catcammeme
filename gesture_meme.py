@@ -1,32 +1,4 @@
-"""
-Webcam gesture -> meme detector (desktop version).
 
-Opens two windows, side by side like the OBS/streamer setups:
-  - "Camera": your webcam feed with hand landmarks drawn on top
-  - "Meme": the cat meme matching whatever gesture you're making
-
-Gestures:
-  rockstar / shaka  -> memes/cat.jpg
-  default (no hand) -> memes/pokercat.jpg
-  one finger up     -> memes/profcat.jpg, memes/professorcat.jpg
-  fist / punch      -> memes/punchcat.jpg
-  shhh              -> memes/shhcat.jpg
-  two fingers together (both hands, tips touching) -> memes/uwucat.jpg, memes/uwucatt.jpg,
-                                                        memes/fingers together muehehe .jpg
-  hand covering face -> memes/hand cover face .jpg
-  crash-out cat (two hands up beside the face)            -> memes/crashout cat .jpg
-  two hands on head                                        -> memes/two hands on head .jpg
-  hand stretched out, palm facing camera (open hand)       -> memes/hand stretched out, palm facing up .jpg
-  side eye (head turned to the side)                       -> memes/side eye cat.jpg
-  spin cat (spinning fast in your chair)                   -> memes/spin cat.mov (plays as a video)
-
-The Camera window shows a live debug readout (head yaw, and optical-flow
-magnitude/coherence, vs. their trigger thresholds) in the top-left corner so
-side-eye and spin can both be tuned by eye - see SIDE_EYE_YAW_DEG and
-SPIN_FLOW_SCORE_THRESHOLD below.
-
-Press q or ESC to quit.
-"""
 
 import math
 import random
